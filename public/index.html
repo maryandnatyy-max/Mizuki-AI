@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#eaf5ff">
+    <meta name="description" content="Mizuki AI - sua garota mágica virtual">
+    <title>Mizuki AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+
+        <div class="overlay" id="overlay"></div>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>✧ Mizuki</h2>
+                <button id="fechar-menu" class="icon-button">✕</button>
+            </div>
+
+            <button id="nova-conversa" class="new-chat">
+                ＋ Nova conversa
+            </button>
+
+            <div class="history-container">
+                <p class="history-label">SUAS CONVERSAS</p>
+                <div id="historico"></div>
+            </div>
+
+            <div class="sidebar-footer">
+                <span>Feito com 💙 para você</span>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <button id="abrir-menu" class="icon-button">☰</button>
+                <div class="brand">
+                    <span class="brand-icon">✧</span>
+                    <span>Mizuki AI</span>
+                </div>
+                <div class="topbar-space"></div>
+            </header>
+
+            <section class="chat-area" id="chat-area">
+                <div class="welcome" id="boas-vindas">
+                    <div class="welcome-card">
+                        <div class="welcome-symbol">✧</div>
+                        <h1 class="welcome-logo">Mizuki</h1>
+                        <p class="welcome-description">
+                            Mizuki (ou simplesmente Miki) é uma
+                            inteligência artificial programada à mão.
+                            Sua assistente virtual, pronta para conversar,
+                            ajudar e acompanhar você em suas ideias!
+                        </p>
+                        <div class="online-status">
+                            <span>✦</span> Online
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mensagens" class="messages"></div>
+            </section>
+
+            <footer class="input-area">
+<form id="formulario">
+    <input
+        type="file"
+        id="imagem"
+        accept="image/*"
+        hidden
+    >
+
+    <button type="button" id="anexar-imagem" title="Enviar imagem" aria-label="Enviar imagem">
+        <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h3l2-2h6l2 2h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z"/>
+            <circle cx="12" cy="13" r="3.5"/>
+        </svg>
+    </button>
+
+    <textarea
+        id="entrada"
+        placeholder="Converse com a Mizuki..."
+        rows="1"
+        maxlength="4000"
+    ></textarea>
+
+    <button type="submit" id="enviar">➤</button>
+</form>
+                <p class="disclaimer">
+                    Mizuki AI · Sua companhia mágica 💙
+                </p>
+            </footer>
+        </main>
+    </div>
+
+
+    <div id="tela-boas-vindas" class="welcome-overlay">
+        <div class="welcome-modal">
+            <div class="welcome-symbol">✧</div>
+            <h1>Oii! Seja bem-vindo(a)!</h1>
+            <p>
+                É um prazer ter você por aqui!
+            </p>
+            <p>
+                Eu sou a <strong>Mizuki</strong>, uma inteligência artificial
+                criada com muito carinho, dedicação e esforço pela minha criadora.
+            </p>
+            <p>
+                Estou aqui para conversar, ajudar com suas dúvidas, estudar,
+                compartilhar ideias e tornar seus dias um pouquinho mais divertidos!
+            </p>
+            <p class="welcome-warning">
+                Mas lembre-se: também posso cometer erros ou fornecer
+                informações incorretas. Por isso, confira informações
+                importantes em fontes confiáveis.
+            </p>
+            <p>Espero que goste da experiência! ♡</p>
+            <button id="fechar-boas-vindas">Ok! ♡</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
