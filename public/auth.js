@@ -2,7 +2,7 @@ let supabaseClient;
 let usuarioAtual;
 
 async function iniciarAutenticacao() {
-    const resposta = await fetch('/api/config');
+    const resposta = await fetch('https://mizuki-ai.onrender.com/api/config');
 
     if (!resposta.ok) {
         throw new Error('Não foi possível carregar a configuração.');

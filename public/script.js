@@ -321,7 +321,7 @@ async function enviarMensagem(event) {
             throw new Error('Sua sessão expirou. Atualize a página.');
         }
 
-        const resposta = await fetch('/api/chat', {
+        const resposta = await fetch('https://mizuki-ai.onrender.com/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -436,7 +436,7 @@ async function enviarImagem(arquivo) {
             throw new Error('Sua sessão expirou. Atualize a página.');
         }
 
-        const resposta = await fetch('/api/analisar-imagem', {
+        const resposta = await fetch('https://mizuki-ai.onrender.com/api/analisar-imagem', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 
@@ -14,6 +15,7 @@ const client = new OpenAI({
     maxRetries: 0
 });
 
+app.use(cors({ origin: ['https://localhost', 'capacitor://localhost', 'http://localhost', 'https://mizuki-ai.onrender.com'] }));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
